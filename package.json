@@ -2,14 +2,22 @@
   "name": "kyma-hello",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "kyme-hello.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LunaYin/kyma-hello.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LunaYin/kyma-hello/issues"
+  },
+  "homepage": "https://github.com/LunaYin/kyma-hello#readme",
   "dependencies": {
-    "express": "^4.17.2"
+    "path": "^0.12.7"
   }
 }

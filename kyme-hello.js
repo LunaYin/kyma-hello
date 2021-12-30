@@ -1,15 +1,8 @@
-const express = require("express");
-const PORT = process.env.PORT || 3000;
-const app = express();
-app.use((req,resp,next) => {
-    console.log('%s', req);
-    next();
-})
+var path = require('path');
+module.exports = {
+    main: function (event, context) {
+        console.log('resolve: ' + path.resolve('kyma-hello.js'));
+        return "Hello world";
+    }
+}
 
-app.get('/', (req,resp) => {
-    resp.send('hello, world');
-});
-
-app.listen(PORT,() => {
-    console.log('Server running on PORT %d', PORT);
-});
