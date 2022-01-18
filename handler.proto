@@ -1,5 +1,7 @@
 syntax = "proto3";
 import "google/api/http.proto";
+package kyma;
+
 message InputValue {
     string input = 1;
 }
@@ -7,7 +9,6 @@ message InputValue {
 message OutputResult {
     string result = 1;
 }
-
 service Hello {
     rpc GetHello (InputValue) returns (OutputResult){
         option (google.api.http) = {
