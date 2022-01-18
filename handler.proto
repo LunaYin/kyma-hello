@@ -10,7 +10,7 @@ message OutputResult {
     string Result = 1;
 }
 service Hello {
-    rpc GetHelloRequest (GetHello) returns (OutputResult){
+    rpc GetHelloRequest (GetHello) returns (OutputResult) {
         option (google.api.http) = {
             get: "/hello/get"
         };
