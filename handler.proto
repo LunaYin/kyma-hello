@@ -1,18 +1,18 @@
 syntax = "proto3";
-import "google/api/http.proto";
+import "google/api/annotations.proto";
 package kyma;
 
-message InputValue {
-    string input = 1;
+message GetHello {
+    string Action = 1;
 }
 
 message OutputResult {
-    string result = 1;
+    string Result = 1;
 }
 service Hello {
-    rpc GetHello (InputValue) returns (OutputResult){
+    rpc GetHelloRequest (GetHello) returns (OutputResult){
         option (google.api.http) = {
-            get: "/hello/{input}"
+            get: "/hello/get"
         };
     };
 }
