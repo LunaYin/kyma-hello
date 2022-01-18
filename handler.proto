@@ -1,0 +1,17 @@
+syntax = "proto3";
+import "google/api/http.proto";
+message InputValue {
+    string input = 1;
+}
+
+message OutputResult {
+    string result = 1;
+}
+
+service Hello {
+    rpc GetHello (InputValue) returns (OutputResult){
+        option (google.api.http) = {
+            get: "/hello/{input}"
+        };
+    };
+}
